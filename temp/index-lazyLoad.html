@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	 body{padding-top: 300px}
+		#div1, #div2, #div3 {
+			width: 80%;
+			height: 400px;
+			margin: 0 auto;
+			margin-bottom: 200px;
+		}
+		#div1 {background: black}
+		#div2 {background: yellow}
+		#div3 {background: red}
+	</style>
+
+</head>
+<body>
+	<div id="div1" class="lazy" data-loader></div>
+	<div id="div2" class="lazy" data-loader></div>
+	<div id="div3" class="lazy" data-loader></div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- jsDeliver -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.lazy/1.7.4/jquery.lazy.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.lazy/1.7.4/jquery.lazy.plugins.min.js"></script>
+
+    <script>
+    	$(function(){
+    		$('.lazy').Lazy({
+    			scrollDirection: 'vertical',
+        	effect: 'fadeIn',
+    		});
+    	});
+    </script>
+</body>
+</html>

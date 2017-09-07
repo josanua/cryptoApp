@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AJAX</title>
+</head>
+<body>
+	
+</body>
+
+<script>
+	var xhttp = new XMLHttpRequest();
+	xhttp.open("GET","http://localhost/ajax/ajax-info.txt", true);
+	xhttp.send();
+
+	console.log(xhttp.statusText)
+	console.log(xhttp.readyState)
+	// console.log(xhttp.responseText)
+	// console.log(xhttp.getAllResponseHeaders())
+	</script>
+</html>
