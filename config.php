@@ -6,4 +6,5 @@
 	define ('DBPASS', '');
 	define ('DBNAME', 'cryptodata');
 	define ('DBTABLE', 'portfolio');
+	// echo 'salut';
  ?>
