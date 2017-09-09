@@ -1,5 +1,5 @@
 <?php 
-	require_once '/mvc/view.php';
+	require_once 'mvc/view.php';
 ?>
 
 <!DOCTYPE html>

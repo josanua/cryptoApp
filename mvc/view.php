@@ -1,5 +1,5 @@
 <?php
-require_once '/mvc/controller.php';
+require_once 'mvc/controller.php';
 
 
 
