@@ -35,5 +35,6 @@
 	<!-- <script src="cex.js"></script> -->
 	<script src="js/coincap.js"></script>
 	<script src="js/general.js"></script>
+	<!-- just for githubtest -->
 </body>
 </html>
