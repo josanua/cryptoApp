@@ -21,7 +21,7 @@
 		
 		<!-- Search function -->
 		<input type="Search Asset" placeholder="Search Asset" id="searchAssetInput" >
-		<button onclick="searchShowAsset()">Search</button>
+		<button onclick="searchShowItem()">Search</button>
 		<span id="resultShow"></span>
 		<form action="mvc/controller.php" method="get" id="saveAssetButton">
 			<input type="button" name="saveButton" value="Save Asset">

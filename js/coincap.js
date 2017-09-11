@@ -18,20 +18,20 @@ function readJSON(){
 
 // -------------------- Search Modul ----------------------- //
 //Take input symbol 
-function searchShowAsset(){
+function searchShowItem(){
 	var  symbol = document.getElementById("searchAssetInput").value;
 			 symbol = symbol.toUpperCase();
 	if (symbol.length == 0){
 		document.getElementById("resultShow").innerHTML = "Please input Symbol";
 	} 
 	else {
-		searchReturnAsset(symbol);
+		returnSearchedItem(symbol);
 	}
 };
 
 
-//Search and return "Symbol" -- Trebuie sa fie independenta de restul
-function searchReturnAsset(symbol){
+//Search and return "Symbol" -- must be independent of others
+function returnSearchedItem(symbol){
 	var parsedText = readJSON(),
 			symbol = symbol;
 	for ( n = 0; n < 90; n++ ){
@@ -43,33 +43,34 @@ function searchReturnAsset(symbol){
 				change24h : parsedText[n].percent_change_24h,
 				change7d 	: parsedText[n].percent_change_7d
 			};
-			// console.log(asset);
-			showSearchedAsset(asset);
+			//console.log(asset);
+			showSearchedItem(asset);
 			return asset;
-		} else console.log("Not Found");
+		} else document.getElementById("resultShow").innerHTML = "Not found"; 
+		 //console.log("Not Found");
 	}
 };
 
 
-//Generate Searched result
-function showSearchedAsset(asset){
+//Show Searched result
+function showSearchedItem(asset){
 	var string = "";
 	if (asset != undefined){
 		for (var n in asset){
 			string += asset[n] + " ";
 		};
-		console.log(string)
-		// document.getElementById("resultShow").innerHTML = "Search result: " + string;
+		// console.log(string)
+		document.getElementById("resultShow").innerHTML = "Search result: " + string;
 	} else console.log("Not defined");
 }
 
 
 // Work with stored Assets
-function showAssetDetails(){
+function showItemDetails(){
 
 	var symbol = document.getElementsByClassName("symbol")[0].innerHTML;
 
-	searchReturnAsset(parsedText,symbol);
+	searchReturnItem(parsedText,symbol);
 	// var showAsset = document.getElementsByClassName("symbol").innerHTML = asset.price;
 	// var asset = searchReturnAsset(parsedText,asset);
 	// return document.getElementsByClassName("price").innerHTML = asset.price;
