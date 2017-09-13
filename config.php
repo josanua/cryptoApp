@@ -1,4 +1,6 @@
 <?php
+//Constant example for define directory 
+define( "ROOT_PATH", dirname( __FILE__ ) . DIRECTORY_SEPARATOR );
 
 	// Database info
 	define ('DBHOST', 'localhost');

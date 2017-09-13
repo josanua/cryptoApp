@@ -1,5 +1,6 @@
 <?php 
-	require_once 'mvc/view.php';
+// Need to correct with constant for all include files
+require_once ('/Applications/XAMPP/xamppfiles/htdocs/apps/cryptoApp/mvc/view.php');
 ?>
 
 <!DOCTYPE html>
@@ -23,13 +24,16 @@
 		<input type="Search Asset" placeholder="Search Asset" id="searchAssetInput" >
 		<button onclick="searchShowItem()">Search</button>
 		<span id="resultShow"></span>
-		<form action="mvc/controller.php" method="get" id="saveAssetButton">
-			<input type="button" name="saveButton" value="Save Asset">
+
+		<!-- Form for save asset -->
+		<form action="mvc/controller.php" method="get" id="saveAssetButton" method="get" name="saveAsset">
+			<input type="text" name="saveButton" value="default">
+			<input type="submit" name="submit" value="Save">
 		</form>
 		<!-- /end -->
 		
 		<span>Your Assets</span>
-		<?php echo $table; ?>
+		<?php renderTable()?>
 	</div>
 
 	<!-- <script src="cex.js"></script> -->

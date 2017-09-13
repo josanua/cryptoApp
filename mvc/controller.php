@@ -1,38 +1,50 @@
 <?php
-require_once './config.php';
+
+require_once ('/Applications/XAMPP/xamppfiles/htdocs/apps/cryptoApp/config.php');
 // Take data from DB
 
+$conn = new mysqli(DBHOST,DBUSER,DBPASS,DBNAME);
 
-// Create connection (object-oriented)
-$conn = new mysqli(DBHOST,DBUSER,DBPASS,DBNAME); 
+//Create connection (object-oriented)
+function openDatabaseConnection(){
 
-// Check connection
-if(mysqli_connect_error()){
-		die("Connection failed:" . mysqli_connect_error());
+	global $conn;
+	//Check connection
+	if(mysqli_connect_error()){
+		 die("Connection failed:" . mysqli_connect_error());
 	}
-	echo "Connected successfully";
-	
-
-// Show table
-$sql = "SELECT * FROM portfolio";
-$showTable = $conn->query($sql);
-
-if($showTable->num_rows > 0 ){
-	while($row = $showTable->fetch_assoc()){
-		$assetName   =  $row["Asset Name"];
-		$symbol      =  $row["Symbol"];
-		$buyedPrice  =  $row["Buyed Price"];
-		$buyedVolume =  $row["Buyed Volume"];
-		$soldVolume  =  $row["Sold Volume"];
-		$soldPrice   =  $row["Sold Price"];
+	else {
+		// echo "Connected successfully <br>";
+		return $conn;
 	}
-} else {
-	echo "No table in this database";
 }
+openDatabaseConnection();
+
+
 
 // Close connection
-$conn->close();
+// $conn->close();
+
 
 // Show asset details
+
+//Save assets to database
+// if(empty($_GET["saveButton"])){
+// 	echo "Asset is empty";
+// }
+// 	else {
+// 		$saveAsset = $_GET["saveButton"];
+// 		$writeDatabase = "INSERT INTO portfolio (Symbol) VALUES ('$saveAsset')";
+		
+// 		if ($conn->query($saveAsset) === true){
+// 			echo "New record created successfully";
+// 		}
+// 		else{
+// 			echo "Error: " . $writeDatabase . "<br>" . $conn->error;
+// 		}
+// 	}
+
+
+// INSERT INTO `portfolio`(`Symbol`) VALUES ('eth')
 
 ?>
