@@ -43,30 +43,29 @@ function showSavedAssets(){
 
 // Render Table
 function renderTable(){
-	
 
 	global $symbol, $buyedPrice, $buyedVolume, $soldVolume, $soldPrice;
 	showSavedAssets();
 
-	// $table = '<table>
-	// 		<tr>
-	// 			<th>Symbol</th>
-	// 			<th>Price $</th>
-	// 			<th>Buyed Price</th>
-	// 			<th>Buyed Volume</th>
-	// 			<th>Sold Volume</th>
-	// 			<th>Sold Price</th>
-	// 		</tr>
-	// 		<tr>
-	// 			<td class="symbol">'.$symbol.'</td>
-	// 			<td class="price"></td>
-	// 			<td class="">'.$buyedPrice.'</td>
-	// 			<td class="">'.$buyedVolume.'</td>
-	// 			<td class="">'.$soldVolume.'</td>
-	// 			<td class="">'.$soldPrice.'</td>
-	// 		</tr>
-	// 	</table>';
-		echo $symbol;
+	$table = '<table>
+			<tr>
+				<th>Symbol</th>
+				<th>Price $</th>
+				<th>Buyed Price</th>
+				<th>Buyed Volume</th>
+				<th>Sold Volume</th>
+				<th>Sold Price</th>
+			</tr>
+			<tr>
+				<td class="symbol">'.$symbol.'</td>
+				<td class="price"></td>
+				<td class="">'.$buyedPrice.'</td>
+				<td class="">'.$buyedVolume.'</td>
+				<td class="">'.$soldVolume.'</td>
+				<td class="">'.$soldPrice.'</td>
+			</tr>
+		</table>';
+		echo $table;
 }
 
 ?>

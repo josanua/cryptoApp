@@ -1,7 +1,5 @@
 <?php 
-// Need to correct with constant for all include files
 include_once  __DIR__ . "/mvc/view.php";
-// echo __DIR__."/mvc/view.php";
 ?>
 
 <!DOCTYPE html>
@@ -33,7 +31,8 @@ include_once  __DIR__ . "/mvc/view.php";
 		</form>
 		<!-- /end -->
 		
-		<span>Your Assets</span>
+		<!-- Show saved assets -->
+		<span>My Assets</span>
 		<?php renderTable()?>
 	</div>
 
