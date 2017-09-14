@@ -1,13 +1,13 @@
 <?php
 
-require_once ('/Applications/XAMPP/xamppfiles/htdocs/apps/cryptoApp/mvc/controller.php');
+require_once __DIR__ . "/controller.php";
 
 
 // $saveButton = '';
 // 
 //function test
 // function returnVar(){
-// 	$text = "Return test it's ok";
+// $text = "Return test it's ok";
 // 	return $text;
 // };
 

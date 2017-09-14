@@ -1,6 +1,7 @@
 <?php 
 // Need to correct with constant for all include files
-require_once ('/Applications/XAMPP/xamppfiles/htdocs/apps/cryptoApp/mvc/view.php');
+include_once  __DIR__ . "/mvc/view.php";
+// echo __DIR__."/mvc/view.php";
 ?>
 
 <!DOCTYPE html>
@@ -8,7 +9,7 @@ require_once ('/Applications/XAMPP/xamppfiles/htdocs/apps/cryptoApp/mvc/view.php
 <head>
 	<meta charset="UTF-8" >
 	<!-- <meta http-equiv="refresh" content="120"> -->
-	<title>Document</title>
+	<title>Document</title> 
 	<link rel="stylesheet" href="css/layout.css">
 </head>
 <body>

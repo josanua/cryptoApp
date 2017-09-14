@@ -1,6 +1,5 @@
 <?php
-
-require_once ('/Applications/XAMPP/xamppfiles/htdocs/apps/cryptoApp/config.php');
+require_once __DIR__ . "../../config.php";
 // Take data from DB
 
 $conn = new mysqli(DBHOST,DBUSER,DBPASS,DBNAME);
